@@ -8,13 +8,13 @@
     <div class="row d_flex">
       <div class="col-md-4">
         <div class="text-bg">
-          <h1>WE <br>
-            WILL <br>
-            bettter<br>
-            Clean <br>
-            <span class="black">Services </span>
+          <h1>PAKAIAN <br>
+            ANDA <br>
+            DIJAMIN<br>
+            BERSIH <br>
+            <span class="black">RAPIH </span>
           </h1>
-          <a href="#contact">Contact Us</a>
+          <a href="#asked">Tentang Kami</a>
         </div>
       </div>
       <div class="col-md-8">
@@ -36,7 +36,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="titlepage">
-          <h2>What we do?</h2>
+          <h2>Cara Kerja Kami</h2>
           <span></span>
           <strong></strong>
         </div>
@@ -46,28 +46,28 @@
       <div class="col-md-3">
         <div class="we_do_box">
           <i><img src="images/antri.png" alt="#" /></i>
-          <h4>House clean</h4>
+          <h4>Antri</h4>
           <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
         </div>
       </div>
       <div class="col-md-3">
         <div class="we_do_box">
           <i><img src="images/mencuci.png" alt="#" /></i>
-          <h4>office Clean</h4>
+          <h4>Mencuci</h4>
           <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
         </div>
       </div>
       <div class="col-md-3">
         <div class="we_do_box">
           <i><img src="images/pengeringan.png" alt="#" /></i>
-          <h4>Factory clean</h4>
+          <h4>Pengeringan</h4>
           <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
         </div>
       </div>
       <div class="col-md-3">
         <div class="we_do_box">
           <i><img src="images/setrika.png" alt="#" /></i>
-          <h4>Factory clean</h4>
+          <h4>Setrika</h4>
           <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
         </div>
       </div>
@@ -132,7 +132,7 @@
       <div class="col-md-12">
         <div class="titlepage">
           <br><br>
-          <h2><u>Contact Us</u></h2>
+          <h2><u>Kontak Kami</u></h2>
         </div>
       </div>
     </div>
@@ -143,22 +143,22 @@
         <form class="main_form">
           <div class="row">
             <div class="col-md-12 ">
-              <input class="contactus" placeholder="Nmae" type="text" name="Nmae">
+              <input class="contactus" placeholder="Nama" type="text" name="Nama">
             </div>
             <div class="col-md-6">
-              <input class="contactus" placeholder="Phone Number" type="text" name=" Phone Number">
+              <input class="contactus" placeholder="Nomor Telepon" type="text" name=" Nomor Telepon">
             </div>
             <div class="col-md-6">
-              <input class="contactus" placeholder="Services" type="text" name="Services">
+              <input class="contactus" placeholder="Jenis Layanan" type="text" name="Jenis Layanan">
             </div>
             <div class="col-md-12">
               <input class="contactus" placeholder="Email " type="text" name="Email ">
             </div>
             <div class="col-md-12">
-              <textarea class="textarea" placeholder="Message" type="text" name="Message">Message</textarea>
+              <textarea class="textarea" placeholder="Pesan" type="text" name="Pesan">Message</textarea>
             </div>
             <div class="col-sm-12">
-              <button class="send_btn">Send</button>
+              <button class="send_btn">Kirim</button>
             </div>
           </div>
         </form>
@@ -169,28 +169,27 @@
 <!-- end contact -->
 <!-- asked -->
 
-<div class="asked">
+<div id="asked" class="asked">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <br><br>
         <div class="titlepage">
-          <h2>Frequently Asked Questions</h2>
+          <h2>Tentang Laundry Kami</h2>
           <span></span>
-          <strong></strong>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
         <div class="some">
-          <h3>Where can I get some?</h3>
+          <h3>Layanan Kami</h3>
           <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed </p>
         </div>
       </div>
       <div class="col-md-12">
         <div class="some">
-          <h3>How to do clean office</h3>
+          <h3>Letak Kami</h3>
           <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed </p>
           <!-- <a class=" read_more" href="#">Read More</a> -->
         </div>
