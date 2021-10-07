@@ -8,4 +8,8 @@ class Pages extends BaseController
     {
         return view('Login');
     }
+    public function AdminPage()
+    {
+        return view('Admin');
+    }
 }
