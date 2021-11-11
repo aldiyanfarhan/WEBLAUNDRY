@@ -14,12 +14,16 @@
             </div>
 
             <div class="col-lg-12 login-form">
-                <?php form_open('Login'); ?>
-                <div class="col-lg-12 login-form">
+                <?php if (!empty(session()->getFlashdata('error'))) : ?>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <?php echo session()->getFlashdata('error'); ?>
+                    </div>
+                <?php endif; ?>
+                <form method="post" action="<?= base_url(); ?>/Login/process">
                     <?= csrf_field(); ?>
                     <div class="form-group">
                         <label class="form-control-label">USERNAME</label>
-                        <input type="text" name="email" id="username" placeholder="Username" class="form-control" required autofocus>
+                        <input type="text" name="username" id="username" placeholder="Username" class="form-control" required autofocus>
                     </div>
                     <div class="form-group">
                         <label class="form-control-label">PASSWORD</label>
@@ -33,10 +37,9 @@
                             <button type="submit" class="btn btn-outline-primary">LOGIN</button>
                         </div>
                     </div>
-                </div>
-                <?php form_close(); ?>
+                </form>
             </div>
-            <div class="col-lg-3 col-md-2"></div>
+
         </div>
     </div>
 </div>

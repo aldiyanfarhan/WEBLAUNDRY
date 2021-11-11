@@ -61,6 +61,7 @@
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarsExample04">
+                                <h1>Hai ! <?= session()->get('name'); ?></h1>
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item active">
                                         <a class="nav-link" href="/#we_do">Alur</a>
@@ -73,6 +74,7 @@
                                     </li>
                                 </ul>
                                 <div class="sign_btn"><a href="/Login">Sign in</a></div>
+                                <div class="sign_btn"><a href="<?= base_url(); ?>/logout">Sign out</a></div>
                             </div>
                         </nav>
                     </div>
