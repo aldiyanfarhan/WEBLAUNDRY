@@ -40,6 +40,6 @@ class Login extends BaseController
   function logout()
   {
     session()->destroy();
-    return redirect()->to('/Home');
+    return redirect()->to('http://localhost:8080/');
   }
 }

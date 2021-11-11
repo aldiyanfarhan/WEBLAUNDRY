@@ -61,7 +61,7 @@
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarsExample04">
-                                <h1>Hai ! <?= session()->get('name'); ?></h1>
+                                <h1 style="color: aliceblue;"><?= session()->get('name'); ?></h1>
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item active">
                                         <a class="nav-link" href="/#we_do">Alur</a>
