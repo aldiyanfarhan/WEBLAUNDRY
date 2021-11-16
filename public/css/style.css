@@ -170,7 +170,7 @@ img {
 }
 
 .form-control:focus {
-  border-color: #ffffff !important;
+  border-color: #706e6e !important;
   box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
 }
 
@@ -796,7 +796,7 @@ ul.footericons li {
 }
 
 input[type="text"] {
-  background-color: #1a2226;
+  background-color: #ffffff;
   border: none;
   border-bottom: 2px solid #0db8de;
   border-top: 0px;
@@ -832,8 +832,8 @@ input[type="password"] {
   box-shadow: none;
   border-bottom: 2px solid #0db8de;
   outline: 0;
-  background-color: #1a2226;
-  color: #ecf0f5;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 input:focus {
@@ -886,3 +886,20 @@ label {
   padding: 0px;
 }
 /* Login End */
+
+/* Admin Page */
+.containeradmin {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.borderadmin {
+  border-radius: 25px;
+  border: 2px solid #73ad21;
+  padding: 20px;
+  width: 1000px;
+  height: 150px;
+}
+
+/* End Admin Page */

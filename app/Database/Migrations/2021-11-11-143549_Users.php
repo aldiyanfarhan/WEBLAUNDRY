@@ -4,41 +4,59 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Users extends Migration
+class Pegawai extends Migration
 {
     public function up()
     {
         $this->forge->addField([
-            'username'          => [
-                'type'           => 'VARCHAR',
-                'constraint'     => '100',
+            'invoice'          => [
+                'type'           => 'INT',
+                'constraint'     => 11,
+                'unsigned'       => true,
+                'auto_increment' => true,
             ],
-            'password'       => [
+
+            'username_admin'       => [
                 'type'           => 'VARCHAR',
-                'constraint'     => '100',
+                'constraint'     => '255',
             ],
-            'name'       => [
+            'nama_cust'       => [
                 'type'           => 'VARCHAR',
-                'constraint'     => '100',
+                'constraint'     => '255',
+            ],
+            'no_telp' => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '13',
+            ],
+            'alamat' => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '255',
             ],
             'created_at' => [
                 'type'           => 'DATETIME',
-                'null'            => true,
+                'null'           => true,
             ],
-            'updated_at' => [
-                'type'           => 'DATETIME',
-                'null'            => true,
+            'jenis_layanan' => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '20',
+            ],
+            'kuantitas' => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '10',
+            ],
+            'berat' => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '10',
             ]
-
         ]);
-        $this->forge->addPrimaryKey('username', true);
-        $this->forge->createTable('users');
+        $this->forge->addPrimaryKey('invoice');
+        $this->forge->createTable('datacust');
     }
 
     //--------------------------------------------------------------------
 
     public function down()
     {
-        $this->forge->dropTable('users');
+        $this->forge->dropTable('datacust');
     }
 }

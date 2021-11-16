@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\UsersModel;
+use CodeIgniter\HTTP\Message;
 
 class Login extends BaseController
 {
@@ -26,14 +27,14 @@ class Login extends BaseController
           'name' => $dataUser->name,
           'logged_in' => TRUE
         ]);
-        return redirect()->to(base_url('home'));
+        return redirect()->to(base_url('Admin'));
       } else {
         session()->setFlashdata('error', 'Username & Password Salah');
-        return redirect()->back();
+        return redirect()->to(base_url('Login'));
       }
     } else {
       session()->setFlashdata('error', 'Username & Password Salah');
-      return redirect()->back();
+      return redirect()->to(base_url('Login'));
     }
   }
 
