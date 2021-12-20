@@ -12,7 +12,7 @@ class CustSeeder extends Seeder
         $data = [
             [
                 'username_admin'    =>  'Anton',
-                'nama_cust'         =>  'pria',
+                'nama_cust'         =>  'wibu',
                 'no_telp'           =>  '081234555678',
                 'alamat'            =>  'Jl. Mawar Putih No. 190, Waru Sidoarjo',
                 'created_at' => Time::now(),
@@ -21,6 +21,6 @@ class CustSeeder extends Seeder
                 'berat'             =>  '5',
             ]
         ];
-        $this->db->table('datacust')->insertBatch($data);
+        $this->db->table('datacustomor')->insertBatch($data);
     }
 }

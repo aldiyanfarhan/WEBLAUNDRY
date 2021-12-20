@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\UsersModel;
+use App\Models\CustomerModel;
 
 class Register extends BaseController
 {
@@ -56,5 +57,16 @@ class Register extends BaseController
             'name' => $this->request->getVar('name')
         ]);
         return redirect()->to('/');
+    }
+    public function Customer()
+    {
+        // $customer = new CustomerModel();
+        $customer = $this->CustomerModel->FindAll();
+        $customer->insert([
+            'username_admin' => session()->get('name'),
+            'namacust' => $this->request->getVar('namacust'),
+            'notelp' => $this->request->getVar('notelp'),
+        ]);
+        return redirect()->to('http://localhost:8080/Admin');
     }
 }
