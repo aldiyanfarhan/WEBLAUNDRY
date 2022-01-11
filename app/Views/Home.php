@@ -88,21 +88,37 @@
             <div class="taxi_main">
               <div class="round_1">01</div>
 
-              <div class="input-group">
-                <input type="search" class="form-control rounded" placeholder="Masukan Kode Laundry" aria-label="Search" aria-describedby="search-addon" />
-                <button type="button" class="btn btn-outline-primary">Cari</button>
-              </div>
+              <form class="input-group" action="" method="GET">
+                <input class="form-control mr-sm-2" type="search" placeholder="Cari" aria-label="Cari" name="keyword">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit">Cari</button>
+              </form>
+
               <br><br>
 
             </div>
           </div>
           <div class="col-sm-4">
             <div class="taxi_main">
-              <div class="round_1">02</div>
-              <h2 class="carol_text">CAR 2</h2>
-              <p class="reader_text">act that a reader will be<br>
-                distracted </p>
-              <div class="images_2"><img src="images/img-2.png"></a></div>
+              <table class="table table-bordered">
+                <tr>
+                  <th>Invoice</th>
+                  <th>Status</th>
+                  <th>Nama</th>
+                </tr>
+                <?php
+
+                foreach ($customer as $row) {
+                ?>
+                  <tr>
+                    <td><?= $row->invoice; ?></td>
+                    <td><?= $row->status; ?></td>
+                    <td><?= $row->nama_cust; ?></td>
+                  </tr>
+                <?php
+                }
+                ?>
+              </table>
+              <?= $pager->links('customer', 'customer_pagination'); ?>
             </div>
           </div>
           <div class="col-sm-4">

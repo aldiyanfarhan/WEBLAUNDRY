@@ -170,7 +170,7 @@
             <hr />
             <table class="table table-bordered">
                 <tr>
-                    <th>invoice</th>
+                    <th>Invoice</th>
                     <th>Status</th>
                     <th>Admin</th>
                     <th>Nama</th>
@@ -186,7 +186,7 @@
                 foreach ($customer as $row) {
                 ?>
                     <tr>
-                        <td><?= $invoice++; ?></td>
+                        <td><?= $row->invoice; ?></td>
                         <td><?= $row->status; ?></td>
                         <td><?= $row->username_admin; ?></td>
                         <td><?= $row->nama_cust; ?></td>

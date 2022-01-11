@@ -25,7 +25,7 @@ class Customer extends BaseController
         }
 
         $data = [
-            'customer' => $searchcustomer->paginate(5, 'customer'),
+            'customer' => $searchcustomer->paginate(10, 'customer'),
             'pager' => $this->customer->pager
         ];
         return view('Admin', $data);
@@ -75,6 +75,7 @@ class Customer extends BaseController
             'nama_cust' => $this->request->getVar('nama'),
             'no_telp' => $this->request->getVar('no_telp'),
             'alamat' => $this->request->getVar('alamat'),
+            'jenis_layanan' => $this->request->getVar('jenis_layanan'),
             'status' => $this->request->getVar('status'),
             'berat' => $this->request->getVar('berat'),
             'kuantitas' => $this->request->getVar('kuantitas'),
