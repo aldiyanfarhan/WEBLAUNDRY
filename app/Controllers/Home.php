@@ -20,7 +20,7 @@ class Home extends BaseController
         if ($keyword) {
             $searchcustomer = $this->customer->searchinvoice($keyword);
         } else {
-            $searchcustomer = $this->customer->searchinvoice("xxx");
+            $searchcustomer = $this->customer->searchinvoice("Null");
         }
 
         $data = [

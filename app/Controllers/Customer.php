@@ -73,10 +73,10 @@ class Customer extends BaseController
 
         $this->customer->insert([
             'nama_cust' => $this->request->getVar('nama'),
+            'status' => $this->request->getVar('status'),
             'no_telp' => $this->request->getVar('no_telp'),
             'alamat' => $this->request->getVar('alamat'),
             'jenis_layanan' => $this->request->getVar('jenis_layanan'),
-            'status' => $this->request->getVar('status'),
             'berat' => $this->request->getVar('berat'),
             'kuantitas' => $this->request->getVar('kuantitas'),
         ]);
