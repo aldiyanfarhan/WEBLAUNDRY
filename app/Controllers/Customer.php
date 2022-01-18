@@ -31,6 +31,16 @@ class Customer extends BaseController
         return view('Admin', $data);
     }
 
+    function edit($invoice)
+    {
+        $dataCustomer = $this->customer->find($invoice);
+        if (empty($dataCustomer)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Customer Tidak ditemukan !');
+        }
+        $data['customer'] = $dataCustomer;
+        return view('Edit', $data);
+    }
+
     public function input()
     {
         // if (!$this->validate([
@@ -79,6 +89,56 @@ class Customer extends BaseController
             'jenis_layanan' => $this->request->getVar('jenis_layanan'),
             'berat' => $this->request->getVar('berat'),
             'kuantitas' => $this->request->getVar('kuantitas'),
+        ]);
+        session()->setFlashdata('message', 'Tambah Data Customer Berhasil');
+        return redirect()->to('/Customer');
+    }
+
+    public function update($invoice)
+    {
+        // if (!$this->validate([
+        //     'nama' => [
+        //         'rules' => 'required',
+        //         'errors' => [
+        //             'required' => '{field} Harus diisi'
+        //         ]
+        //     ],
+        //     'jenis_kelamin' => [
+        //         'rules' => 'required',
+        //         'errors' => [
+        //             'required' => '{field} Harus diisi'
+        //         ]
+        //     ],
+        //     'no_telp' => [
+        //         'rules' => 'required',
+        //         'errors' => [
+        //             'required' => '{field} Harus diisi'
+        //         ]
+        //     ],
+        //     'email' => [
+        //         'rules' => 'required|valid_email',
+        //         'errors' => [
+        //             'required' => '{field} Harus diisi',
+        //             'valid_email' => 'Email Harus Valid'
+        //         ]
+        //     ],
+        //     'alamat' => [
+        //         'rules' => 'required',
+        //         'errors' => [
+        //             'required' => '{field} Harus diisi'
+        //         ]
+        //     ],
+
+        // ])) {
+        //     session()->setFlashdata('error', $this->validator->listErrors());
+        //     return redirect()->back();
+        // }
+
+        $this->customer->update($invoice, [
+            'nama_cust' => $this->request->getVar('nama'),
+            'status' => $this->request->getVar('status'),
+            'no_telp' => $this->request->getVar('no_telp'),
+            'alamat' => $this->request->getVar('alamat'),
         ]);
         session()->setFlashdata('message', 'Tambah Data Customer Berhasil');
         return redirect()->to('/customer');

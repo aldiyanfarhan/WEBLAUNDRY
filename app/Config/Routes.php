@@ -45,6 +45,8 @@ $routes->get('/Admin', 'Customer::index');
 $routes->post('/Customer/process', 'Customer::process');
 
 $routes->post('/Customer/input', 'Customer::input');
+$routes->get('Customer/edit/(:num)', 'Customer::edit/$1');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

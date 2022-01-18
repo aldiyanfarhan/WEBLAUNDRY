@@ -3,8 +3,8 @@
 <?= $this->section('content'); ?>
 <br>
 <h4 class="text-center">FORM INPUT</h4>
+<!-- FORM IMPUT DATA CUSTOMER -->
 <div class="row">
-
     <div class="container">
         <br>
         <div class="card">
@@ -33,8 +33,8 @@
                             <option>Pilih Status :</option>
                             <option value="antri">Antri</option>
                             <option value="mencuci">Mencuci</option>
-                            <option value="pengeringan">Pengeringan</option>
                             <option value="setrika">Setrika</option>
+                            <option value="pengeringan">Pengeringan</option>
                         </select>
                     </div>
 
@@ -71,9 +71,47 @@
         </div>
     </div>
 </div>
+<!-- END FORM IMPUT DATA CUSTOMER -->
+
+<!-- Modal Edit Product-->
+<form action="/product/update" method="post">
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Product</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label>Product Name</label>
+                        <input type="text" class="form-control product_name" name="product_name" placeholder="Product Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input type="text" class="form-control product_price" name="product_price" placeholder="Product Price">
+                    </div>
 
 
 
+                </div>
+                <div class="modal-footer">
+                    <input type="hidden" name="product_id" class="product_id">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<!-- End Modal Edit Product-->
+
+
+<!-- TABLE CUSTOMER -->
 <div class="container">
     <div class="card">
         <div class="card-header">
@@ -123,7 +161,7 @@
                         <td><?= $row->kuantitas; ?></td>
                         <td><?= $row->berat; ?></td>
                         <td>
-                            <a title="Edit" href="<?= base_url(""); ?>" class="btn btn-info">Edit</a>
+                            <a title="Edit" href="<?= base_url("/Customer/edit/$row->invoice"); ?>" class="btn btn-info btn-sm btn-edit">Edit</a>
                         </td>
                     </tr>
                 <?php
@@ -134,5 +172,6 @@
         </div>
     </div>
 </div>
+<!-- END TABLE CUSTOMER -->
 
 <?= $this->endSection(); ?>>

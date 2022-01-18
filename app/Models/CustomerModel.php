@@ -18,6 +18,7 @@ class CustomerModel extends Model
         // $builder
         return $this->table('Customer')->like('nama_cust', $keyword);
     }
+
     public function searchinvoice($keyword)
     {
         // $builder = $this->table('customer');
