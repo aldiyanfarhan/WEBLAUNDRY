@@ -82,23 +82,26 @@
   <div id="taxis" class="taxis_section layout_padding">
     <div class="container">
       <h1 class="our_text">TRACKING <span style="color: #f4db31;">INFO</span></h1>
+
       <div class="taxis_section_2">
         <div class="row">
+
           <div class="col-sm-4 cornerinfo">
             <div class="taxi_main">
               <div class="round_1">01</div>
-
               <form class="input-group" action="" method="GET">
                 <input class="form-control mr-sm-2" type="search" placeholder="Cari" aria-label="Cari" name="keyword">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit">Cari</button>
               </form>
-
               <br><br>
 
             </div>
           </div>
-          <div class="col-sm-4">
+
+          <div class="col-sm-6">
             <div class="taxi_main">
+
+              <div class="round_1">02</div>
               <table class="table table-bordered">
                 <tr>
                   <th>Invoice</th>
@@ -118,18 +121,10 @@
                 }
                 ?>
               </table>
-              <?= $pager->links('customer', 'customer_pagination'); ?>
+
             </div>
           </div>
-          <div class="col-sm-4">
-            <div class="taxi_main">
-              <div class="round_1">03</div>
-              <h2 class="carol_text">CAR 3</h2>
-              <p class="reader_text">act that a reader will be<br>
-                distracted </p>
-              <div class="images_2"><img src="images/img-2.png"></a></div>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>

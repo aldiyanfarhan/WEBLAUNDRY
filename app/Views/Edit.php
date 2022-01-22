@@ -1,4 +1,4 @@
-<?= $this->extend('Layout/Template'); ?>
+<?= $this->extend('Layout/Edit-Template'); ?>
 
 <?= $this->section('content'); ?>
 
@@ -18,28 +18,29 @@
                     </button>
                 </div>
             <?php endif; ?>
-            <form method="post" action="<?= base_url('customer/update/' . $customer->invoice) ?>">
+            <form method="post" action="<?= base_url('customer/update/' . $customer->invoice) ?>" required>
                 <?= csrf_field(); ?>
 
                 <div class="form-group">
                     <label for="nama">Nama :</label>
-                    <input type="text" class="form-control" id="nama" name="nama" value="<?= $customer->nama_cust; ?>">
+                    <input type="text" class="form-control" id="nama" name="nama" value="<?= $customer->nama_cust; ?>" required>
 
                 </div>
 
                 <div class="form-group">
                     <label for="no_telp">No Telp :</label>
-                    <input type="text" class="form-control" id="no_telp" name="no_telp" value="<?= $customer->no_telp; ?>" />
+                    <input type="text" class="form-control" id="no_telp" name="no_telp" value="<?= $customer->no_telp; ?>" required>
                 </div>
 
                 <div class="form-group">
                     <label for="alamat">Alamat :</label>
-                    <textarea class="form-control" name="alamat" id="alamat"><?= $customer->alamat; ?></textarea>
+                    <input type="text" class="form-control" id="alamat" name="alamat" value="<?= $customer->alamat; ?>" required>
                 </div>
+
                 <div class="form-group">
                     <label>Status</label>
                     <select name="status" class="form-control" id="status" value="">
-                        <option>Pilih Status :</option>
+                        <option value="" disabled selected>Pilih Status :</option>
                         <option value="antri" <?= ($customer->status == "antri" ? "selected" : ""); ?>>Antri</option>
                         <option value="mencuci" <?= ($customer->status == "mencuci" ? "selected" : ""); ?>>Mencuci</option>
                         <option value="setrika" <?= ($customer->status == "setrika" ? "selected" : ""); ?>>Setrika</option>

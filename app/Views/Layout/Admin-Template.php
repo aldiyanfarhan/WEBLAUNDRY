@@ -14,22 +14,22 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <!-- style css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <!-- Responsive-->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="/css/responsive.css">
     <!-- fevicon -->
-    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <link rel="icon" href="/images/fevicon.png" type="image/gif" />
     <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="/css/jquery.mCustomScrollbar.min.css">
     <!-- Tweaks for older IEs-->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <link rel="stylesheet" href="/https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href=/https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-    <link rel="icon" href="images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
 </head>
 <!-- body -->
 
@@ -49,9 +49,9 @@
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
                         <div class="full">
                             <div class="center-desk">
-                                <div class="logo">
-                                    <a href="/"><img src="images/logo.png" alt="#" width="200px" /></a>
-                                </div>
+                                <!-- <div class="logo">
+                                    <a href="/"><img src="" alt="#" width="200px" /></a>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -72,6 +72,7 @@
                                     <li class="nav-item active">
                                         <a class="nav-link" href="/#contact">Kontak</a>
                                     </li>
+                                    <div class="sign_btn"><a href="<?= base_url(); ?>/logout">Sign out</a></div>
                                 </ul>
 
                             </div>
@@ -88,11 +89,9 @@
     <?= $this->renderSection('content'); ?>
 
     <section class="footer">
-        <div class="popup" onclick="myFunction()">Copyright @2021 Rafly Ilham Suyudi
-            <span class="popuptext" id="myPopup">
-                <div><a href="/Login">Sign in</a></div>
-            </span>
-        </div>
+        <p class="credits">
+            Copyright @2021 Rafly Ilham Suyudi</a>
+        </p>
         <ul class="footericons">
             <li><a target="_blank" href="https://www.facebook.com/rafly.i.suyudi"><i class="fa fa-facebook"></i></a></li>
             <li><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
@@ -102,6 +101,7 @@
     </section>
 
     <!-- end footer -->
+
     <!-- Javascript files-->
     <?= $this->rendersection('script'); ?>
     <script src="js/jquery.min.js"></script>
@@ -125,13 +125,6 @@
                 });
             }).change();
         });
-    </script>
-    <script>
-        // When the user clicks on div, open the popup
-        function myFunction() {
-            var popup = document.getElementById("myPopup");
-            popup.classList.toggle("show");
-        }
     </script>
 
     <!-- sidebar -->

@@ -6,15 +6,15 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Filters\FilterInterface;
 
-class UsersAuthFilter implements FilterInterface
+class AdminAuthFilter implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
         //    if user not logged in
-        // if (!session()->get('logged_in')) {
-        //     // then redirct to login page
-        //     return redirect()->to('/login');
-        // }
+        if (!session()->get('logged_in')) {
+            // then redirct to login page
+            return redirect()->to('/login');
+        }
     }
 
     //--------------------------------------------------------------------

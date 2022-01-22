@@ -19,7 +19,7 @@ class Filters extends BaseConfig
         'csrf'     => \CodeIgniter\Filters\CSRF::class,
         'toolbar'  => \CodeIgniter\Filters\DebugToolbar::class,
         'honeypot' => \CodeIgniter\Filters\Honeypot::class,
-        'usersAuth' => \App\Filters\UsersAuthFilter::class,
+        'AdminAuth' => \App\Filters\AdminAuthFilter::class,
     ];
 
     /**
@@ -29,15 +29,7 @@ class Filters extends BaseConfig
      * @var array
      */
     public $globals = [
-        'before' => [
-            'csrf',
-            'usersAuth' => [
-                'except' => [
-                    'login/*',
-                    'logout/*'
-                ]
-            ]
-        ],
+        'before' => [],
         'after'  => [
             'toolbar',
             //'honeypot'

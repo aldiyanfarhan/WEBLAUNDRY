@@ -1,4 +1,4 @@
-<?= $this->extend('Layout/Template'); ?>
+<?= $this->extend('Layout/Admin-Template'); ?>
 
 <?= $this->section('content'); ?>
 

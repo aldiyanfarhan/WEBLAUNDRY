@@ -44,29 +44,23 @@ class Customer extends BaseController
     public function input()
     {
         // if (!$this->validate([
-        //     'status' => [
-        //         'rules' => 'required',
-        //         'errors' => [
-        //             'required' => '{field} Harus diisi'
-        //         ]
-        //     ],
         //     'nama_cust' => [
         //         'rules' => 'required',
         //         'errors' => [
         //             'required' => '{field} Harus diisi'
         //         ]
         //     ],
-        //     'jenis_layanan' => [
+        //     'status' => [
         //         'rules' => 'required',
         //         'errors' => [
         //             'required' => '{field} Harus diisi'
-
         //         ]
         //     ],
         //     'no_telp' => [
         //         'rules' => 'required',
         //         'errors' => [
         //             'required' => '{field} Harus diisi'
+
         //         ]
         //     ],
         //     'alamat' => [
@@ -78,6 +72,7 @@ class Customer extends BaseController
 
         // ])) {
         //     session()->setFlashdata('error', $this->validator->listErrors());
+        //     session()->setFlashdata('message', 'Tambah Data Customer Gagal');
         //     return redirect()->back()->withInput();
         // }
 
@@ -97,13 +92,13 @@ class Customer extends BaseController
     public function update($invoice)
     {
         // if (!$this->validate([
-        //     'nama' => [
+        //     'nama_cust' => [
         //         'rules' => 'required',
         //         'errors' => [
         //             'required' => '{field} Harus diisi'
         //         ]
         //     ],
-        //     'jenis_kelamin' => [
+        //     'status' => [
         //         'rules' => 'required',
         //         'errors' => [
         //             'required' => '{field} Harus diisi'
@@ -113,13 +108,7 @@ class Customer extends BaseController
         //         'rules' => 'required',
         //         'errors' => [
         //             'required' => '{field} Harus diisi'
-        //         ]
-        //     ],
-        //     'email' => [
-        //         'rules' => 'required|valid_email',
-        //         'errors' => [
-        //             'required' => '{field} Harus diisi',
-        //             'valid_email' => 'Email Harus Valid'
+
         //         ]
         //     ],
         //     'alamat' => [
@@ -131,7 +120,8 @@ class Customer extends BaseController
 
         // ])) {
         //     session()->setFlashdata('error', $this->validator->listErrors());
-        //     return redirect()->back();
+        //     session()->setFlashdata('message', 'Tambah Data Customer Gagal');
+        //     return redirect()->back()->withInput();
         // }
 
         $this->customer->update($invoice, [

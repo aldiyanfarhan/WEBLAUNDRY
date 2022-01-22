@@ -1,4 +1,4 @@
-<?= $this->extend('Layout/Template'); ?>
+<?= $this->extend('Layout/Admin-Template'); ?>
 
 <?= $this->section('content'); ?>
 <br>
@@ -15,22 +15,23 @@
 
                     <div class="form-group">
                         <label for="nama">Nama :</label>
-                        <input type="text" class="form-control" id="nama" name="nama" value="<?= old('nama'); ?>">
+                        <input type="text" class="form-control" id="nama" name="nama" value="<?= old('nama'); ?>" required>
                     </div>
 
                     <div class="form-group">
                         <label for="no_telp">No Telp :</label>
-                        <input type="text" class="form-control" id="no_telp" name="no_telp" value="<?= old('no_telp') ?>" />
+                        <input type="text" class="form-control" id="no_telp" name="no_telp" value="<?= old('no_telp') ?>" required>
                     </div>
 
                     <div class="form-group">
                         <label for="alamat">Alamat :</label>
-                        <textarea class="form-control" name="alamat" id="alamat"><?= old('alamat') ?></textarea>
+                        <input type="text" class="form-control" id="alamat" name="alamat" value="<?= old('alamat') ?>" required>
                     </div>
+
                     <div class="form-group">
                         <label>Status</label>
-                        <select name="status" class="form-control" id="status" value="<?= old('status') ?>">
-                            <option>Pilih Status :</option>
+                        <select name="status" class="form-control" id="status" value="<?= old('status') ?>" required>
+                            <option value="" disabled selected>Pilih Status :</option>
                             <option value="antri">Antri</option>
                             <option value="mencuci">Mencuci</option>
                             <option value="setrika">Setrika</option>
@@ -40,8 +41,8 @@
 
                     <div class="form-group">
                         <div>
-                            <select name="jenis_layanan" class="form-control" id="jenis_layanan" value="<?= old('jenis_layanan') ?>">
-                                <option>Jenis Layanan :</option>
+                            <select name="jenis_layanan" class="form-control" id="jenis_layanan" value="<?= old('jenis_layanan') ?>" required>
+                                <option value="" disabled selected>Jenis Layanan :</option>
                                 <option value="pakaian_regular">Pakaian Regular</option>
                                 <option value="pakaian_ons">Pakaian Ons</option>
                                 <option value="bedcover_regular">Bedcover Regular</option>

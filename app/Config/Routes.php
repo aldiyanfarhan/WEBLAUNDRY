@@ -41,7 +41,7 @@ $routes->post('/login/process', 'Login::process');
 
 $routes->get('/logout', 'Login::logout');
 
-$routes->get('/Admin', 'Customer::index');
+$routes->get('/Admin', 'Customer::index', ['filter' => 'AdminAuth']);
 $routes->post('/Customer/process', 'Customer::process');
 
 $routes->post('/Customer/input', 'Customer::input');
