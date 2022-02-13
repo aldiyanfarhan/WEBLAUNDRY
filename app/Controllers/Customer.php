@@ -133,4 +133,15 @@ class Customer extends BaseController
         session()->setFlashdata('message', 'Tambah Data Customer Berhasil');
         return redirect()->to('/customer');
     }
+
+    function delete($invoice)
+    {
+        $dataCustomer = $this->customer->find($invoice);
+        if (empty($dataCustomer)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Customer Tidak ditemukan !');
+        }
+        $this->customer->delete($invoice);
+        session()->setFlashdata('message', 'Delete Data Pegawai Berhasil');
+        return redirect()->to('/customer');
+    }
 }

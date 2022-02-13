@@ -47,6 +47,7 @@
                                 <option value="pakaian_ons">Pakaian Ons</option>
                                 <option value="bedcover_regular">Bedcover Regular</option>
                                 <option value="bedcover_ons">Bedcover Regular</option>
+                                <option value="lainlain">Lain Lain</option>
                             </select>
                         </div><br>
                         <div>
@@ -56,6 +57,12 @@
                             </div>
                             <div id="check" class="form-group bedcover_regular bedcover_ons box">
                                 <label for="kuantitas">Kuantitas untuk Bedcover :</label>
+                                <input type="text" class="form-control" id="kuantitas" name="kuantitas" placeholder="Pieces" value="<?= old('kuantitas') ?>" />
+                            </div>
+                            <div id="check" class="form-group lainlain box">
+                                <label for="">Masukan Jenis Layanan :</label>
+                                <input type="text" class="form-control" id="jenis_layanan" name="jenis_layanan" placeholder="" value="<?= old('jenis_layanan') ?>" />
+                                <input type="text" class="form-control" id="berat" name="berat" placeholder="KG" value="<?= old('berat') ?>" />
                                 <input type="text" class="form-control" id="kuantitas" name="kuantitas" placeholder="Pieces" value="<?= old('kuantitas') ?>" />
                             </div>
                         </div>
@@ -163,6 +170,7 @@
                         <td><?= $row->berat; ?></td>
                         <td>
                             <a title="Edit" href="<?= base_url("/Customer/edit/$row->invoice"); ?>" class="btn btn-info btn-sm btn-edit">Edit</a>
+                            <a title="Delete" href="<?= base_url("/Customer/delete/$row->invoice") ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ?')">Delete</a>
                         </td>
                     </tr>
                 <?php
